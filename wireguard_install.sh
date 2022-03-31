@@ -2,11 +2,12 @@
 
 # Install packages
 opkg update
-opkg install wireguard
+opkg install wireguard-tools
+opkg install qrencode
  
 # Configuration parameters
 WG_IF="wg0"
-WG_PORT="51820"
+WG_PORT="51821"
 WG_ADDR="192.168.9.1/24"
 WG_ADDR6="fdf1:7610:d152:3a9c::1/64"
 
