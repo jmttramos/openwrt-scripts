@@ -3,7 +3,6 @@
 # Install packages
 opkg update
 opkg install wireguard-tools
-opkg install qrencode
  
 # Configuration parameters
 WG_IF="wg0"
