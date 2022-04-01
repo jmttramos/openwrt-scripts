@@ -5,7 +5,7 @@ opkg update
 opkg install wireguard-tools
 opkg install qrencode
 opkg install ipset
- 
+
 # Configuration parameters
 WG_IF="wg0"
 WG_PORT="51821"
