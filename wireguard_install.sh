@@ -3,12 +3,13 @@
 # Install packages
 opkg update
 opkg install wireguard-tools
+opkg install qrencode
+opkg install ipset
  
 # Configuration parameters
 WG_IF="wg0"
 WG_PORT="51821"
 WG_ADDR="192.168.9.1/24"
-WG_ADDR6="fdf1:7610:d152:3a9c::1/64"
 
 # Generate and exchange the keys
 umask u=rw,g=,o=
@@ -53,4 +54,3 @@ uci add_list network.wgclient.allowed_ips="${WG_ADDR%.*}.0/${WG_ADDR#*/}"
 uci add_list network.wgclient.allowed_ips="${WG_ADDR6%/*}/${WG_ADDR6#*/}"
 uci commit network
 /etc/init.d/network restart
-
